@@ -1,0 +1,78 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: black;
+
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .top-controls {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  
+  .control-box {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+    margin: 0 10px;
+  }
+  
+  .text-box {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    flex-grow: 5;
+    text-align: center;
+  }
+
+
+
+  #timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Add space between controls and countdown display */
+}
+
+input {
+    margin: 5px;
+    color: black;
+}
+
+button {
+    margin: 5px;
+    cursor: pointer;
+}
+
+#time-display {
+    font-size: 2em; /* Make the countdown timer larger */
+}
+
+  
+  
+  @media (max-width: 768px) {
+    .top-controls {
+      flex-direction: column;
+    }
+  
+    .control-box {
+      margin: 10px 0;
+    }
+  }
+  

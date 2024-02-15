@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EchoPrompt</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <div class="top-controls">
+    <div id="stopclock" class="control-box">Stopclock</div>
+    <div id="options" class="control-box">Options</div>
+    <div id="timer" class="control-box"> Timer
+        <div id="timer-container">
+            <div id="controls">
+                <input id="minutes" type="number" placeholder="MM" min="0" max="59">
+                <input id="seconds" type="number" placeholder="SS" min="0" max="59">
+                <button id="start"><i class="fas fa-play"></i></button>
+                <button id="pause" style="display: none;"><i class="fas fa-pause"></i></button>
+                <button id="stop" style="display: none;"><i class="fas fa-stop"></i></button>
+            </div>
+            <div id="time-display">00:00</div>
+        </div> 
+    </div>  
+  </div>
+  <div id="text-box" class="text-box">Text-box</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

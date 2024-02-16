@@ -11,23 +11,34 @@
 <body>
 <div class="container">
   <div class="top-controls">
-    <div id="stopclock" class="control-box">Stopclock</div>
-    <div id="options" class="control-box">Options</div>
-    <div id="timer" class="control-box"> Timer
-        <div id="timer-container">
-            <div id="controls">
-                <input id="minutes" type="number" placeholder="MM" min="0" max="59">
-                <input id="seconds" type="number" placeholder="SS" min="0" max="59">
-                <button id="start"><i class="fas fa-play"></i></button>
-                <button id="pause" style="display: none;"><i class="fas fa-pause"></i></button>
-                <button id="stop" style="display: none;"><i class="fas fa-stop"></i></button>
-            </div>
-            <div id="time-display">00:00</div>
-        </div> 
+    <div id="stopclock" class="control-box">
+      <h2>Stopwatch</h2>
+      <div id="stopwatch">
+        <!-- Unique ID for stopwatch timer -->
+        <span id="stopwatch-timer">00:00:00:000</span>
+      </div>
+    </div>
+    <div id="options" class="control-box">
+      <h2>Options</h2>
+      <button id="startStop"><i class="fas fa-play"></i></button>
+      <button id="reset" style="display: none;"><i class="fas fa-stop"></i></button>
+    </div>
+    <div class="control-box">
+      <h2>Timer</h2>
+      <div id="timer-container">
+        <div id="timer-controls">
+            <input id="minutes" type="number" placeholder="MM" min="0" max="59">
+            <input id="seconds" type="number" placeholder="SS" min="0" max="59">
+            <button id="start-timer"><i class="fas fa-play"></i></button>
+            <button id="pause-timer" style="display: none;"><i class="fas fa-pause"></i></button>
+            <button id="stop-timer" style="display: none;"><i class="fas fa-stop"></i></button>
+        </div>
+        <div id="time-display">00:00</div>
+      </div> 
     </div>  
   </div>
-  <div id="text-box" class="text-box">Text-box</div>
+  <div id="text-box" class="text-box"><h2>Text-box</h2></div>
 </div>
-<script src="script.js"></script>
+<script src="clocks.js"></script>
 </body>
 </html>

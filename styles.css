@@ -1,78 +1,99 @@
 body, html {
-    height: 100%;
-    margin: 0;
-    font-family: 'Lato', sans-serif;
-    background-color: black;
-
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  
-  .top-controls {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-  }
-  
-  .control-box {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    flex-grow: 1;
-    margin: 0 10px;
-  }
-  
-  .text-box {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    margin: 10px;
-    flex-grow: 5;
-    text-align: center;
-  }
-
-
-
-  #timer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  height: 100%;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background-color: black;
+  color: white; /* Ensure text is visible against the black background */
 }
 
-#controls {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px; /* Add space between controls and countdown display */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 20px; /* Added padding for spacing */
 }
 
-input {
-    margin: 5px;
-    color: black;
+.top-controls {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  justify-content: space-between; /* Better space distribution */
+  padding: 10px;
+}
+
+.control-box {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin: 0 10px; /* Adjusted margin for alignment */
+  flex: 1 1 auto; /* Allows boxes to grow and shrink */
+  border-radius: 5px; /* Added for rounded corners */
+}
+
+.text-box {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  margin-top: 20px; /* Adjusted margin for better spacing */
+  flex-grow: 1;
+  text-align: center;
+  border-radius: 5px; /* Added for rounded corners */
+}
+
+/* Timer and stopwatch styles */
+#timer-container, #stopwatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#timer-controls {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+input[type="number"] {
+  margin: 0 5px;
+  padding: 10px;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 5px; /* Added for rounded corners */
+  text-align: center;
 }
 
 button {
-    margin: 5px;
-    cursor: pointer;
+  margin: 0 5px;
+  padding: 10px;
+  background-color: #555;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; /* Added for rounded corners */
 }
 
-#time-display {
-    font-size: 2em; /* Make the countdown timer larger */
+button:hover {
+  background-color: #777; /* Added hover effect */
 }
 
-  
-  
-  @media (max-width: 768px) {
-    .top-controls {
+button:focus {
+  outline: none;
+}
+
+#time-display, #stopwatch-timer {
+  font-size: 2em;
+  margin-top: 10px; /* Spacing above the display */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .top-controls {
       flex-direction: column;
-    }
-  
-    .control-box {
-      margin: 10px 0;
-    }
   }
-  
+
+  .control-box {
+      margin-bottom: 20px; /* Increased spacing on mobile */
+      width: 100%; /* Full width on mobile */
+  }
+}

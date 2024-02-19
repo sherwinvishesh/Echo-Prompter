@@ -1,0 +1,174 @@
+
+
+
+#teleprompter {
+  width: 100%;
+  height: 100%;
+  
+}
+
+#text_editor_container {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+#text_editor {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+#play_div {
+  max-height: 100%;
+  overflow-y: scroll;
+}
+
+#disable_block {
+  z-index: 20;
+  position: fixed;
+  left: 0em;
+  top: 0em;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+#settings_container {
+  z-index: 10;
+  position: fixed;
+  left: 0em;
+  top: 0em;
+  max-width: 2.3em;
+  border-bottom-right-radius: 0.15em;
+  overflow-x: hidden;
+  transition-property: max-width;
+  transition-duration: 500ms;
+}
+
+#rec_text {
+  position: fixed;
+  left: 0em;
+  bottom: 0em;
+  width: 100%;
+  max-width: 100%;
+  overflow-y: auto;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.txt_cmp_header {
+  margin: 0.5em;
+  display: inline-block;
+  text-align: right;
+  line-height: 1.5;
+}
+
+.txt_cmp_content {
+  display: inline-block;
+  line-height: 1.5;
+}
+
+.txt_cmp_settings {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  display: inline-block;
+  text-align: right;
+  flex-grow: 1;
+}
+
+.word_match {
+  margin-right: 0.3em;
+  display: inline-block;
+  border-radius: 0.15em;
+}
+
+#settings { /* If it's an ID */
+  display: flex;
+  flex-direction: row; /* This makes children (options) align horizontally */
+  justify-content: space-around; /* Adjusts spacing between the options */
+  /* Additional styling here to suit your needs */
+}
+
+#messages {
+  margin-top: 2em;
+}
+
+#settings_inner_container {
+  min-width: 15.1em;
+}
+
+#settings {
+  padding-top: 0.2em;
+  border-bottom-right-radius: 0.15em;
+  width: fit-content;
+}
+
+.info .s_icon, .info .s_msg {
+  background-color: #0099CC;
+}
+
+.warning .s_icon, .warning .s_msg {
+  background-color: #FF8800;
+}
+
+.error .s_icon, .error .s_msg {
+  background-color: #CC0000;
+}
+
+.s_item, .info, .warning, .error {
+  margin: 0.2em;
+  border-radius: 0.15em;
+}
+
+.s_item, .txt_cmp_icon {
+  opacity: 0.6;
+  user-select: none;
+  transition-property: opacity;
+  transition-duration: 200ms;
+}
+
+.s_item.s_edit {
+  margin: 0em;
+  opacity: 1;
+}
+
+.s_item:hover, .txt_cmp_icon:hover {
+  opacity: 1;
+}
+
+.info, .warning, .error {
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+}
+
+.s_flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.s_img, .txt_cmp_icon {
+  width: 1.5em;
+  display: block;
+}
+
+.s_icon, .txt_cmp_icon {
+  display: inline-block;
+  padding: 0.2em;
+  margin-right: 0.5em;
+  border-radius: 0.15em;
+}
+
+.s_text, .s_msg {
+  margin-right: 0.5em;
+  max-width: 12em;
+}
+
+.s_msg {
+  padding: 0.5em;
+  max-width: 11em;
+  border-radius: 0.15em;
+  color: white;
+}

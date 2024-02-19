@@ -65,63 +65,47 @@ function resetTimer() {
 function formatTime(time) {
     return time < 10 ? "0" + time : time;
 }
-
 let stopwatchInterval;
-let stopwatchTime = 0; // Time in milliseconds
+let stopwatchElapsed = 0; // Time in milliseconds
+let stopwatchRunning = false;
 
-document.getElementById('startStop').addEventListener('click', function() {
-    const hasClassPlay = this.firstChild.classList.contains('fa-play');
-    if (hasClassPlay) {
-        startStopwatch();
-        this.firstChild.classList.remove('fa-play');
-        this.firstChild.classList.add('fa-pause');
-        document.getElementById('reset').style.display = 'inline';
-    } else {
-        stopStopwatch();
-        this.firstChild.classList.remove('fa-pause');
-        this.firstChild.classList.add('fa-play');
-    }
-});
-
-document.getElementById('reset').addEventListener('click', function() {
-    stopStopwatch();
-    resetStopwatch();
-    document.getElementById('startStop').firstChild.classList.remove('fa-pause');
-    document.getElementById('startStop').firstChild.classList.add('fa-play');
-    this.style.display = 'none';
-});
-
-function startStopwatch() {
-    if (!stopwatchInterval) {
-        const startTime = Date.now() - stopwatchTime;
-        stopwatchInterval = setInterval(function() {
-            stopwatchTime = Date.now() - startTime;
-            document.getElementById('stopwatch-timer').textContent = formatStopwatchTime(stopwatchTime);
-        }, 10); // Update stopwatch every 10 milliseconds
-    }
+function formatStopwatch(milliseconds) {
+  let hours = Math.floor(milliseconds / 3600000);
+  milliseconds %= 3600000;
+  let minutes = Math.floor(milliseconds / 60000);
+  milliseconds %= 60000;
+  let seconds = Math.floor(milliseconds / 1000);
+  milliseconds %= 1000;
+  return `${pad(hours, 2)}:${pad(minutes, 2)}:${pad(seconds, 2)}.${pad(milliseconds, 3)}`;
 }
 
-function stopStopwatch() {
-    clearInterval(stopwatchInterval);
-    stopwatchInterval = null;
+function pad(number, length) {
+  return ('000' + number).slice(-length);
+}
+
+function updateStopwatchDisplay() {
+  document.getElementById('stopwatch-display').textContent = formatStopwatch(stopwatchElapsed);
+}
+
+function startStopwatch() {
+  const startTime = Date.now() - stopwatchElapsed;
+  stopwatchInterval = setInterval(() => {
+    stopwatchElapsed = Date.now() - startTime;
+    updateStopwatchDisplay();
+  }, 1);
+  stopwatchRunning = true;
+}
+
+function pauseStopwatch() {
+  clearInterval(stopwatchInterval);
+  stopwatchRunning = false;
 }
 
 function resetStopwatch() {
-    stopStopwatch();
-    stopwatchTime = 0;
-    document.getElementById('stopwatch-timer').textContent = "00:00:00:000";
+  clearInterval(stopwatchInterval);
+  stopwatchElapsed = 0;
+  updateStopwatchDisplay();
+  stopwatchRunning = false;
 }
 
-function formatStopwatchTime(ms) {
-    let milliseconds = parseInt((ms % 1000) / 10),
-        seconds = Math.floor((ms / 1000) % 60),
-        minutes = Math.floor((ms / (1000 * 60)) % 60),
-        hours = Math.floor((ms / (1000 * 60 * 60)) % 24);
-
-    hours = (hours < 10) ? "0" + hours : hours;
-    minutes = (minutes < 10) ? "0" + minutes : minutes;
-    seconds = (seconds < 10) ? "0" + seconds : seconds;
-    milliseconds = (milliseconds < 10) ? "0" + milliseconds : milliseconds;
-
-    return hours + ":" + minutes + ":" + seconds + ":" + milliseconds;
-}
+// Remove event listeners from here and integrate into Teleprompter.js

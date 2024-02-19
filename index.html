@@ -5,26 +5,88 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EchoPrompt</title>
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="teleprompter.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
-<body>
+<body onLoad="main();">
 <div class="container">
   <div class="top-controls">
     <div id="stopclock" class="control-box">
-      <h2>Stopwatch</h2>
-      <div id="stopwatch">
-        <!-- Unique ID for stopwatch timer -->
-        <span id="stopwatch-timer">00:00:00:000</span>
+      
+      <div id="stopwatch"><div id="text-output">
+        <div id="stopwatch-display">00:00:00.000</div></div>
+        <!-- Stopwatch controls will be managed by the existing settings functionality -->
       </div>
     </div>
+    
     <div id="options" class="control-box">
-      <h2>Options</h2>
-      <button id="startStop"><i class="fas fa-play"></i></button>
-      <button id="reset" style="display: none;"><i class="fas fa-stop"></i></button>
+      
+
+
+<div id="settings">
+  <div id="s_play" class="s_item"><div class="s_flex">
+    <div class="s_icon" id="s_play_icon"><img src="icons/play-white.svg" class="s_img" id="s_play_img" /></div><span class="s_text" id="s_play_text"></span>
+  </div></div>
+  <div id="s_restart" class="s_item"><div class="s_flex">
+    <div class="s_icon" id="s_restart_icon"><img src="icons/restart-white.svg" class="s_img" id="s_restart_img" /></div><span class="s_text"></span>
+  </div></div>
+  <div id="s_edit" class="s_item"><div class="s_flex">
+    <div class="s_icon" id="s_edit_icon"><img src="icons/edit-white.svg" class="s_img" id="s_edit_img" /></div><span class="s_text"></span>
+  </div></div>
+  <div id="s_lang" class="s_item"><div class="s_flex">
+    <div class="s_icon" id="s_lang_icon"><img src="icons/lang-white.svg" class="s_img" id="s_lang_img" /></div><span class="s_text"></span>
+  </div></div>
+  <div id="s_bg" class="s_item"><div class="s_flex">
+    <div class="s_icon" id="s_bg_icon"><img src="icons/bg-white.svg" class="s_img" id="s_bg_img" /></div><span class="s_text"></span>
+  </div></div>
+  <div id="s_fg" class="s_item"><div class="s_flex">
+    <div class="s_icon" id="s_fg_icon"><img src="icons/fg-white.svg" class="s_img" id="s_fg_img" /></div><span class="s_text"></span>
+  </div></div>
+  <div id="s_size" class="s_item"><div class="s_flex">
+    <div class="s_icon" id="s_size_icon"><img src="icons/size-white.svg" class="s_img" id="s_size_img" /></div><span class="s_text"></span>
+  </div></div>
+  <div id="s_font" class="s_item"><div class="s_flex">
+    <div class="s_icon" id="s_font_icon"><img src="icons/font-white.svg" class="s_img" id="s_font_img" /></div><span class="s_text"></span>
+  </div></div>
+  <div id="s_margin" class="s_item"><div class="s_flex">
+    <div class="s_icon" id="s_margin_icon"><img src="icons/margin-white.svg" class="s_img" id="s_margin_img" /></div><span class="s_text"></span>
+  </div></div>
+  <div id="s_mirrorv" class="s_item"><div class="s_flex">
+    <div class="s_icon" id="s_mirrorv_icon"><img src="icons/mirrorv-white.svg" class="s_img" id="s_mirrorv_img" /></div><span class="s_text"></span>
+  </div></div>
+  <div id="s_mirrorh" class="s_item"><div class="s_flex">
+    <div class="s_icon" id="s_mirrorh_icon"><img src="icons/mirrorh-white.svg" class="s_img" id="s_mirrorh_img" /></div><span class="s_text"></span>
+  </div></div>
+  <div id="s_showrec" class="s_item"><div class="s_flex">
+    <div class="s_icon" id="s_showrec_icon"><img src="icons/showrec-white.svg" class="s_img" id="s_showrec_img" /></div><span class="s_text"></span>
+  </div></div>
+  <div id="s_clear" class="s_item"><div class="s_flex">
+    <div class="s_icon" id="s_clear_icon"><img src="icons/clear-white.svg" class="s_img" id="s_clear_img" /></div><span class="s_text"></span>
+  </div></div>
+  <div id="messages">
+    <!--<div class="info"><div class="s_flex">
+      <div class="s_icon"><img src="icons/info-white.svg" class="s_img" /></div><span class="s_msg">This is an info. And it contains some text which is quite a bit longer... Just to see whether it will work</span>
+    </div></div>
+    <div class="warning"><div class="s_flex">
+      <div class="s_icon"><img src="icons/warning-white.svg" class="s_img" /></div><span class="s_msg">This is a warning.</span>
+    </div></div>
+    <div class="error"><div class="s_flex">
+      <div class="s_icon"><img src="icons/error-white.svg" class="s_img" /></div><span class="s_msg">This is an error.</span>
+    </div></div>-->
+  </div>
+</div>
+
+
+      
+
+
+
+
     </div>
     <div class="control-box">
-      <h2>Timer</h2>
+      
       <div id="timer-container">
         <div id="timer-controls">
             <input id="minutes" type="number" placeholder="MM" min="0" max="59">
@@ -33,12 +95,63 @@
             <button id="pause-timer" style="display: none;"><i class="fas fa-pause"></i></button>
             <button id="stop-timer" style="display: none;"><i class="fas fa-stop"></i></button>
         </div>
-        <div id="time-display">00:00</div>
+        <div id="text-output"><div id="time-display">00:00</div></div>
       </div> 
     </div>  
   </div>
-  <div id="text-box" class="text-box"><h2>Text-box</h2></div>
+  <div id="text-box" class="text-box">
+    <div id="disable_block"></div>
+
+  <div id="teleprompter">
+    <div id="settings_container"><div id="settings_inner_container">
+      
+    </div></div>
+
+    <div id="play_div"><span id="play_text"></span></div>
+    <div id="edit_text_div"><div id="text_editor_container"><textarea id="text_editor" cols="80" rows="50"></textarea></div></div>
+    <div id="rec_text">
+      <div class="txt_cmp_header">
+        Looking for:&nbsp;<br />
+        Recognized:&nbsp;
+      </div>
+      <div class="txt_cmp_content">
+        <span id="disconnected_texts">
+          <span id="looking_for"></span><br />
+          <span id="recorded"></span>
+        </span>
+        <span id="connected_texts"></span>
+      </div>
+      <div class="txt_cmp_settings">
+        <img src="icons/previous-white.svg" class="txt_cmp_icon" id="prev" />
+        <img src="icons/next-white.svg" class="txt_cmp_icon" id="next" />
+        <img src="icons/last-white.svg" class="txt_cmp_icon" id="last" />
+      </div>
+    </div>
+  </div>
+
+  
+  
+  
+  </div>
 </div>
 <script src="clocks.js"></script>
+<script src="SpeechRecognizer.js"></script>
+  <script src="constants.js"></script>
+  <script src="helpers.js"></script>
+  <script src="Teleprompter.js"></script>
+  <script type="text/javascript">
+    function listener(type, argA, argB) {
+      if (type == 'result') {
+        console.log(argA + ' // ' + argA + argB);
+      }
+    }
+
+    function main() {
+      let prompter = new Teleprompter();
+      // let rec = new SpeechRecognizer(listener);
+      // rec.start();
+      // window.setTimeout(() => rec.stop(), 10000);
+    }
+  </script>
 </body>
 </html>

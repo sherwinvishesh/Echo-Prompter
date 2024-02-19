@@ -11,6 +11,7 @@ body, html {
   flex-direction: column;
   height: 100%;
   padding: 20px; /* Added padding for spacing */
+  background-color: black;
 }
 
 .top-controls {
@@ -81,10 +82,23 @@ button:focus {
   outline: none;
 }
 
-#time-display, #stopwatch-timer {
+#text-output {
   font-size: 2em;
   margin-top: 10px; /* Spacing above the display */
 }
+
+#options {
+  display: flex;
+  justify-content: center; /* Aligns items on the main-axis (horizontal by default) */
+  align-items: center; /* Aligns items on the cross-axis (vertical if the main-axis is horizontal) */
+}
+
+#stopclock{
+  display: flex;
+  justify-content: center; /* Aligns items on the main-axis (horizontal by default) */
+  align-items: center; /* Aligns items on the cross-axis (vertical if the main-axis is horizontal) */
+}
+
 
 /* Adjustments for smaller screens */
 @media (max-width: 768px) {

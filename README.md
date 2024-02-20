@@ -83,8 +83,3 @@ Feel free to reach out and connect with me on [LinkedIn](https://www.linkedin.co
 
 Made with ❤️ by Sherwin
 
-
----
->Things that need to be updated on github (basically everything)
-- Readme.md
-- index.html

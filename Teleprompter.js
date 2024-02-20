@@ -1,4 +1,3 @@
-
 class Teleprompter {
   constructor() {
     this.text = DEFAULT_TEXT_EN;

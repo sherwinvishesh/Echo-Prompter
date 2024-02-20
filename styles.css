@@ -12,6 +12,7 @@ body, html {
   height: 100%;
   padding: 20px; /* Added padding for spacing */
   background-color: black;
+  
 }
 
 .top-controls {
@@ -19,6 +20,7 @@ body, html {
   flex-wrap: wrap; /* Allows items to wrap on smaller screens */
   justify-content: space-between; /* Better space distribution */
   padding: 10px;
+  
 }
 
 .control-box {
@@ -39,6 +41,8 @@ body, html {
   flex-grow: 1;
   text-align: center;
   border-radius: 5px; /* Added for rounded corners */
+  max-height: 80vh; /* Adjust based on your layout; vh units make it responsive */
+  overflow-y: auto; /* Allows for vertical scrolling */
 }
 
 /* Timer and stopwatch styles */
@@ -99,6 +103,47 @@ button:focus {
   align-items: center; /* Aligns items on the cross-axis (vertical if the main-axis is horizontal) */
 }
 
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: black; /* Dark background */
+  color: white; /* Light text for contrast */
+  font-size: 1rem;
+  position: relative; /* Makes the footer always visible at the bottom */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Custom scrollbar for the whole page */
+::-webkit-scrollbar {
+  width: 12px; /* Adjust scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+  background: #333; /* Color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black; /* Color of the scrollbar thumb */
+  border-radius: 6px; /* Optional: Rounds the corners of the scrollbar thumb */
+  border: 3px solid #333; /* Optional: Creates a border inside the track */
+}
+
+/* Custom scrollbar for the #text-box */
+.text-box::-webkit-scrollbar {
+  width: 12px; /* Adjust scrollbar width specific to .text-box */
+}
+
+.text-box::-webkit-scrollbar-track {
+  background: #333; /* Color of the scrollbar track specific to .text-box */
+}
+
+.text-box::-webkit-scrollbar-thumb {
+  background-color: black; /* Color of the scrollbar thumb specific to .text-box */
+  border-radius: 6px; /* Optional: Rounds the corners of the scrollbar thumb specific to .text-box */
+  border: 3px solid #333; /* Optional: Creates a border inside the track specific to .text-box */
+}
 
 /* Adjustments for smaller screens */
 @media (max-width: 768px) {
@@ -111,3 +156,4 @@ button:focus {
       width: 100%; /* Full width on mobile */
   }
 }
+

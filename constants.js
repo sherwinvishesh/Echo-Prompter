@@ -1,66 +1,27 @@
 
-const DEFAULT_TEXT_EN = `Wikipedia (abbreviated as WP) is a multilingual online encyclopedia. The website
-was created and is maintained as an open collaboration project by a community of volunteer
-editors, using a wiki-based editing system. It is the largest and most popular general reference
-work on the World Wide Web. It is also one of the 20 most popular websites ranked by Alexa, as
-of March 2020. It features exclusively free content and no commercial ads and is owned and
-supported by the Wikimedia Foundation, a non-profit organization funded primarily through
-donations.
+const DEFAULT_TEXT_EN = `Hi, this is Tony Stark, and this application is called Echo-Prompt. Picture this: you're gearing up for a high-stakes presentation—maybe unveiling the latest Stark Industries innovation or addressing the United Nations. What you need is not just any teleprompter; you need Echo-Prompt, the future of seamless presentation technology, designed for the modern speaker who demands perfection.
 
-Wikipedia was launched on January 15, 2001, and was created by Jimmy Wales and Larry Sanger.
-Sanger coined its name as a portmanteau of the words "wiki" (Hawaiian for "quick") and
-"encyclopedia". Initially an English-language encyclopedia, versions of Wikipedia in other
-languages were quickly developed. With 6.1 million articles, the English Wikipedia is the
-largest of the more than 300 Wikipedia encyclopedias. Overall, Wikipedia comprises more than
-53 million articles attracting 1.5 billion unique visitors per month.
+In the heart of my workshop, amidst suits of armor and groundbreaking tech, I've seen the power of effective communication. That's where Echo-Prompt shines. Utilizing cutting-edge WebSpeech API, it offers real-time speech recognition, allowing you to control your presentation flow with just your voice. Imagine standing on stage, captivating your audience, with the freedom to navigate your script effortlessly—no clickers, no distractions, just you and your words in perfect harmony.
 
-In 2005, Nature published a peer review comparing 42 hard science articles from Encyclopædia
-Britannica and Wikipedia and found that Wikipedia's level of accuracy approached that of
-Britannica, although critics suggested that it might not have fared so well in a similar study
-of a random sampling of all articles or one focused on social science or contentious social
-issues. The following year, Time magazine stated that the open-door policy of allowing anyone to
-edit had made Wikipedia the biggest and possibly the best encyclopedia in the world, and was a
-testament to the vision of Jimmy Wales.`.replace(/([^\r\n])\r?\n([^\r\n])/gm, '$1 $2');
+But Echo-Prompt isn't just about voice activation. It's about customization that fits your unique style. Whether you're presenting in a dimly lit room or under the bright lights of a press conference, Echo-Prompt lets you adjust text size, font, and colors for optimal readability. And for those who appreciate the finer details, it offers features like vertical and horizontal mirroring, ensuring your presentation looks as good from the back with a reflective teleprompter as it does from the front.
 
-const DEFAULT_TEXT_DE = `Deutschland ist ein Bundesstaat in Mitteleuropa. Er besteht seit 1990 aus
-16 Ländern und ist als freiheitlich-demokratischer und sozialer Rechtsstaat verfasst. Die
-Bundesrepublik Deutschland stellt die jüngste Ausprägung des deutschen Nationalstaates dar.
-Deutschland hat 83 Millionen Einwohner und zählt mit durchschnittlich 232 Einwohnern pro
-Quadratkilometer zu den dicht besiedelten Flächenstaaten.
+Developed with the same principle I apply to all my creations—making the impossible possible—Echo-Prompt is here to revolutionize the way we communicate. Whether you're a CEO, a world leader, or a superhero, it's designed to ensure your message isn't just heard, but felt. So, suit up, and let Echo-Prompt take your presentations to new heights.`.replace(/([^\r\n])\r?\n([^\r\n])/gm, '$1 $2');
 
-An Deutschland grenzen neun Staaten, es hat Anteil an der Nord- und Ostsee im Norden sowie dem
-Bodensee und den Alpen im Süden. Es liegt in der gemäßigten Klimazone und verfügt über sechzehn
-National- und über hundert Naturparks. Bundeshauptstadt sowie bevölkerungsreichste deutsche Stadt
-ist Berlin. Weitere Metropolen mit mehr als einer Million Einwohnern sind Hamburg, München und Köln,
-der größte Ballungsraum ist das Ruhrgebiet, Frankfurt am Main ist als deutsches Finanzzentrum
-international von Bedeutung. Deutschlands Bevölkerung hat mit 1,57 Kindern pro Frau (2018) eine
-vergleichsweise niedrige Geburtenrate, die jedoch in den 2010er-Jahren leicht anstieg.
+const DEFAULT_TEXT_DE = `Hallo, ich bin Tony Stark, und diese Anwendung heißt Echo-Prompt. Stell dir vor: Du bereitest dich auf eine Präsentation von höchster Wichtigkeit vor – vielleicht die Enthüllung der neuesten Innovation von Stark Industries oder eine Ansprache bei den Vereinten Nationen. Was du brauchst, ist nicht irgendein Teleprompter; du brauchst Echo-Prompt, die Zukunft nahtloser Präsentationstechnologie, entworfen für den modernen Redner, der Perfektion verlangt.
 
-Auf dem Gebiet des heutigen Deutschlands ist die Anwesenheit von Menschen vor 500.000 Jahren durch
-Funde des Homo heidelbergensis, des Neandertalers sowie einiger der ältesten Kunstwerke der
-Menschheit aus der späteren Altsteinzeit nachgewiesen. Um 5600 v. Chr. wanderten die ersten Bauern
-mitsamt Vieh und Saatgut aus dem Nahen Osten ein. Seit der Antike ist die lateinische Bezeichnung
-Germania für das Siedlungsgebiet der Germanen bekannt. Das ab dem 10. Jahrhundert bestehende Heilige
-Römische Reich, das aus vielen Herrschaftsgebieten bestand, war wie der 1815 ins Leben gerufene
-Deutsche Bund ein Vorläufer des späteren deutschen Nationalstaates.`.replace(/([^\r\n])\r?\n([^\r\n])/gm, '$1 $2');
+Im Herzen meiner Werkstatt, umgeben von Rüstungen und bahnbrechender Technik, habe ich die Macht effektiver Kommunikation gesehen. Dort glänzt Echo-Prompt. Mit der Nutzung der modernsten WebSpeech API bietet es Echtzeit-Spracherkennung, die es dir erlaubt, den Fluss deiner Präsentation allein mit deiner Stimme zu steuern. Stell dir vor, du stehst auf der Bühne, fesselst dein Publikum, mit der Freiheit, dein Skript mühelos zu navigieren – keine Klicker, keine Ablenkungen, nur du und deine Worte in perfekter Harmonie.
 
-const DEFAULT_TEXT_FR = `L’escalade, ou grimpe, parfois appelée varappe (désuet), est une pratique
-et un sport consistant à progresser le long d'une paroi pour atteindre le haut d'un relief ou d'une
-structure artificielle par un cheminement appelé voie, avec ou sans aide de matériel. Le terrain de
-pratique va des blocs de faible hauteur aux parois de plusieurs centaines de mètres, en passant par
-les murs d'escalade. Le pratiquant est couramment appelé « grimpeur ».
+Aber Echo-Prompt geht nicht nur um Sprachaktivierung. Es geht um Anpassung, die deinem einzigartigen Stil entspricht. Ob du in einem schlecht beleuchteten Raum präsentierst oder unter den hellen Lichtern einer Pressekonferenz, Echo-Prompt lässt dich Textgröße, Schriftart und Farben für optimale Lesbarkeit anpassen. Und für diejenigen, die Augen für Details haben, bietet es Funktionen wie vertikale und horizontale Spiegelung, sicherstellend, dass deine Präsentation von hinten mit einem reflektierenden Teleprompter genauso gut aussieht wie von vorn.
 
-L'escalade développe de nombreuses qualités physiques, comme la force musculaire, la souplesse,
-l'endurance musculaire, l'équilibre, de bonnes capacités psychomotrices et de planification. Elle
-sollicite particulièrement la musculature des bras, du tronc et des jambes.
+Mit demselben Prinzip entwickelt, das ich auf all meine Kreationen anwende – das Unmögliche möglich zu machen –, ist Echo-Prompt hier, um die Art und Weise, wie wir kommunizieren, zu revolutionieren. Egal, ob du CEO, Weltführer oder Superheld bist, es ist entworfen, um sicherzustellen, dass deine Botschaft nicht nur gehört, sondern gefühlt wird. Also, rüste dich aus, und lass Echo-Prompt deine Präsentationen zu neuen Höhen führen.`.replace(/([^\r\n])\r?\n([^\r\n])/gm, '$1 $2');
 
-Cette discipline se développe progressivement en tant que sport à part entière dès la fin du xixe
-siècle dans la ruée des premiers alpinistes vers les grands sommets, avant de se démocratiser au
-siècle suivant, devenant populaire dès la fin des années 1970. Les premières compétitions
-officielles sont organisées en 1988 par l'Union internationale des associations d'alpinisme (UIAA).
-Chaque année est organisée une Coupe du monde de difficulté, de bloc et de vitesse, et tous les deux
-ans des championnats du monde, l'ensemble étant supervisé par la Fédération internationale
-d'escalade (IFSC).`.replace(/([^\r\n])\r?\n([^\r\n])/gm, '$1 $2');
+const DEFAULT_TEXT_FR = `Salut, je suis Tony Stark, et cette application s'appelle Echo-Prompt. Imaginez ceci : vous vous préparez pour une présentation de haute importance—peut-être en dévoilant la dernière innovation de Stark Industries ou en adressant les Nations Unies. Ce dont vous avez besoin, ce n'est pas juste n'importe quel téléprompteur ; vous avez besoin d'Echo-Prompt, l'avenir de la technologie de présentation sans faille, conçu pour l'orateur moderne qui exige la perfection.
+
+Au cœur de mon atelier, parmi des armures et des technologies révolutionnaires, j'ai vu le pouvoir de la communication efficace. C'est là qu'Echo-Prompt brille. Utilisant l'API WebSpeech de pointe, il offre une reconnaissance vocale en temps réel, vous permettant de contrôler le flux de votre présentation avec juste votre voix. Imaginez-vous sur scène, captivant votre audience, avec la liberté de naviguer dans votre script sans effort—pas de cliqueteurs, pas de distractions, juste vous et vos mots en parfaite harmonie.
+
+Mais Echo-Prompt n'est pas seulement à propos de l'activation vocale. Il s'agit de la personnalisation qui s'adapte à votre style unique. Que vous présentiez dans une salle faiblement éclairée ou sous les projecteurs d'une conférence de presse, Echo-Prompt vous permet d'ajuster la taille du texte, la vitesse de défilement et plus encore pour convenir à votre style de présentation. Et pour ceux qui apprécient les détails fins, il offre des fonctionnalités telles que le miroir vertical ou horizontal, assurant que votre présentation semble aussi bonne de l'arrière avec un téléprompteur réfléchissant qu'elle ne le fait de l'avant.
+
+Développé avec le même principe que j'applique à toutes mes créations—rendre l'impossible possible—Echo-Prompt est ici pour révolutionner la manière dont nous communiquons. Que vous soyez PDG, leader mondial ou super-héros, il est conçu pour s'assurer que votre message n'est pas seulement entendu, mais ressenti. Alors, équipez-vous et laissez Echo-Prompt emmener vos présentations vers de nouveaux sommets.`.replace(/([^\r\n])\r?\n([^\r\n])/gm, '$1 $2');
 
 const LANGUAGE_VALUES =
   [ ['Afrikaans',       ['af-ZA']],
@@ -140,6 +101,7 @@ const LANGUAGE_VALUES =
     ['Svenska',         ['sv-SE']],
     ['Kiswahili',       ['sw-TZ', 'Tanzania'],
                         ['sw-KE', 'Kenya']],
+    ['ಕನ್ನಡ',           ['ka-IN']],                    
     ['ქართული',        ['ka-GE']],
     ['Հայերեն',          ['hy-AM']],
     ['தமிழ்',           ['ta-IN', 'இந்தியா'],

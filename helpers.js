@@ -1,4 +1,3 @@
-
 function rgbToLum(r, g, b) {
   r /= 255; g /= 255; b /= 255;
   return r * 0.2126 + g * 0.7152 + b * 0.0722;

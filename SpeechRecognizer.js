@@ -1,4 +1,3 @@
-
 var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
 
 class SpeechRecognizer {

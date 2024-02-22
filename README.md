@@ -50,7 +50,7 @@ These options are designed to provide you with full control over your teleprompt
 
 ## User Interface
 
->Update the pic of UI
+![Echo-Prompter Screenshot](https://raw.githubusercontent.com/sherwinvishesh/Echo-Prompter/main/icons/Echo-Prompt%20Screeshot.png)
 
 
 

@@ -22,7 +22,7 @@ cd Echo-Prompter
 2. Open `index.html` in your preferred web browser to launch the application. No additional setup is required.
 
 ## Usage
->**Note**: Echo-Prompter uses the WebSpeech API for speech recognition, which may experience inaccuracies in noisy environments or with background disturbances.
+>**Note**: Echo-Prompter uses the WebSpeech API for accurate speech recognition, which may experience inaccuracies in noisy environments or with background disturbances.
 1. **Prepare Your Script**: Enter your speech or presentation script into the teleprompter's text area.
 2. **Customize Settings**: Adjust the teleprompter settings to match your reading preference, including font size and scroll speed.
 3. **Start the Teleprompter**: Use the voice-activated commands or the on-screen controls to start, pause, or reset the teleprompter as needed during your practice or presentation.
